@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <h1>Lazy-boy: A hotkey project for League of Legends</h1>
+    <p>
+        Lazy-boy borrows heavily from <a href="https://tl.net/forum/sc2-strategy/341878-thecore-advanced-keyboard-layout">The Core - Advanced Keyboard Layout</a> 
+        project for startcraft 2. This project has similar core objectives and steals the idea of using the opposite side of the keyboard to the default key binding. 
+        This layout is currently only available for right handed players.
+    </p>
+    <p>
+        This layout requires a wider desktop space as the keyboard is shifted half it's length to the left and rotated. For this layout to work as intended all keys 
+        between the right hand side <span class="key">Alt</span> and the right hand side <span class="key">Ctrl</span> keys need to be removed (i.e. Windows, Menu).
+    </p>
+
+    <!------------------------------------------------------------------------------------------->
+    <h2>Assumptions</h2>
+    <ul>
+        <li>An anchored hand will provide better accuracy than a floating hand</li>
+        <li>A bridged finger can press a key more firmly than a flat finger</li>
+        <li>A bridged finger has better accuracy than a flat finger</li>
+        <li>The resting position of each finger does not create a straight line</li>
+        <li>The thumb has better range of motion and dexterity</li>
+        <li>Keys <span class="key">F</span> and <span class="key">J</span> provide tactile feedback to determine location on the keyboard</li>
+        <li>Keys <span class="key">Ctrl</span>, <span class="key">Alt</span> and <span class="key">Shift</span> provide modifiers</li>
+        <li>As distance increases from the home key, accuracy of the finger will decrease</li>
+        <li>As distance increases from the home key, time between keystrokes will increase</li>
+        <li>Alternating fingers increases actions per minute</li>
+        <li>The more fingers in use, the higer the apm</li>
+        <li>It is easier to perform a keystroke than to click on an object in game</li>
+        <li>Grouping similar commands will increase learning and produce better results</li>
+        <li>Regular combinations and situational commands should be easy to execute sequentially</li>
+        <li>Less strain and stretching is better for the hand and wrist</li>
+    </ul>
+    <!--------------------------------------------------------------------------------------------------->
+    <h2>Physical set up</h2>
+    <p>
+        When evaluating the <a href="default-keys.html">default key bindings</a> against the considerations listed previously, there are some obvious inefficiencies. 
+        The first being the position of the thumb on the keyboard. The thumb is positioned directly over the <span class="key">Space</span> key, as it would be for regular typing.
+        Incidentally, we would recommend using <span class="hotkey-section_command">Select Self</span> instead of the default the binding of <span class="hotkey-section_command">Center Camera On Champion</span>
+        if you decide not to make the switch to this layout. This thumb position is an under utilization of deterity of the thumb as its strength comes from the lateral range of motion. It is not easy to reach over the spacebar to press a key on 
+        the main section of the keyboard. In this position, the thumb is able to reach towards the <span class="key">Alt</span> key but it is uncomfortable to do so 
+        while keeping the key 4 fingers on their home key. 
+    </p>
+    <p>
+        The thumb position causes an additional mechanical problem. The result is that the default bindings cause large finger movements between valuable commands. This results 
+        in an inefficient in game experience as a player needs to find a balance between using all of the control options available to them, with the higher likelihood of 
+        a mispressed key due to the decrease in accuracy. Some combinations of commands will not be performed accurately, if at all, by the vast majority of players. The reason
+        for this is the difficulty in reacting for the modifier keys.
+    </p>
+    <p>
+        Using modifiers is a core concept of lazy-boy. In doing so, we are able to create layers on the keyboard, like the default system does for spell casting 
+        (i.e. <span class="key">Shift+Q</span>: quick cast, <span class="key">Alt+Q</span>: self cast). Using layers allows us to reduce the average distance travelled for each 
+        finger per command. It also allows logical grouping of commands onto a single key. The default key bindings make it difficult to use the modifiers as 
+        <span class="key">Ctrl</span> and <span class="key">Shift</span> are difficult to reach. Even when pressed with the left hand little finger, we have reduced the number of 
+        keys we can modify by removing one finger from its home key.
+    </p>
+    <p>
+        The solution is to move the hand to the other side of the keyboard. If we remove the keys between the right hand side <span class="key">Alt</span> and the 
+        right hand side <span class="key">Ctrl</span> key, we can place our thumb so that it is easy to reach all three modifier keys. Removing the unused keys is neccessary
+        for the resting position of the thumb and also allows better tactile feedback for when the thumb is making its most difficult reach to the <span class="key">Alt</span> 
+        key. They keyboard is repositioned on the table to keep the arms at about shoulder distance apart.
+    </p>
+    <p>
+        The second issue we have looked to tackle is that resting our four fingers on the same row is not inline with atonomy of our hands. As the little finger is significantly
+        shorter than the rest, it needs to stretch in order to reach the same distance. To counter this, a player will often move the stress into their wrist instead. We have 
+        attempted to address this by moving the little finger down one row and rotating the keyboard 25-30°. We have decided to make use of the physical difference of the 
+        <span class="key">J</span> to deterimine our home position. Making our home keys <span class="key">J</span>, <span class="key">I</span>, <span class="key">O</span>
+        and <span class="key">P</span>, with our thumb resting on <span class="key">Shift</span>. 
+    </p>
+    <p>
+        The rotation of the keyboard is to allow each finger to move inline with its intended range of motion when selecting keys above or below the home keys. Keyboard keys are 
+        not directly above one another. Each column of keys is on an angle away from the centre of the keyboard. As we are using the opposite side of the keyboard to how it was
+        designed, reaching for keys away from the home keys is awkward and difficult. The goal is to have the keys aligned with the line drawn by your fingers when they are drawn 
+        into a fist.
+    </p>
+    <!--------------------------------------------------------------------------------------------------->
+    <h2>Layers</h2>
+    <p>
+        Using the modifiers, we have access to 4 additional layers. <span class="key">Ctrl</span>, <span class="key">Shift</span>, <span class="key">Alt</span> and <span class="key">Ctrl+Shift</span>.
+        The other combinations are available, but not part of the scope of this project as they are difficult to execute. Note: Using Custom keyboard layouts within Windows 10 
+        is not currently covered but an area of interest for future research (i.e. rebinding modifiers).
+    </p>
+    <p>
+        The primary layer is without a modifier, the secondary layer uses the modifier <span class="key">Shift</span>, the third layer is the <span class="key">Ctrl</span>,
+        the fourth and fifth layers are <span class="key">Alt</span> and <span class="key">Ctrl+Shift</span> respectively. Each layer consists of only keys which are within one key of a home key. 
+    </p>
+    <!---------------------------------------------------------------------------------------------------->
+    <h2>Common mechanics</h2>
+    <ul>
+        <li>Movement</li>
+        <li>Auto attacking minions</li>
+        <li>Auto attacking champions</li>
+        <li>Offensive Spells</li>
+        <li>Defensive Spells</li>
+        <li>Summoner Spells</li>
+        <li>Items</li>
+        <li>Camera</li>
+        <li>Misc</li>
+    </ul>
+
+    <p>
+        As we are working on the assumption that a keypress is easier to execute than to click on an object in game we will be looking to use the commands which include a click
+        within the <span class="hotkey-section_title">Player Movement</span> section. 
+        These are <span class="hotkey-section_command">Player Move Click</span>, <span class="hotkey-section_command">Player Attack Move Click</span> and <span class="hotkey-section_command">Player Attack Only Click</span>.
+    </p>
+
+    <h3>Movement</h3>
+    <p>
+        The <span class="hotkey-section_command">Player Move Click</span> assignment is unchanged at <span class="key">MB2</span>. This command will move the character if no 
+        object is below the mouse when click and will attack the object if there is. This is not recommended for use with attacking and if there were an option for 
+        <span class="hotkey-section_command">Player Move Only Click</span> we would be using that instead. <span class="hotkey-section_command">Move Pet Click</span> is assigned to <span class="key">Alt+MB2</span>.
+    </p>
+    
+    <h3>Auto attacking minions</h3>
+    <p>
+        This project provides two recommend options for auto attacking minions, <span class="hotkey-section_command">Player Attack Move Click</span> and <span class="hotkey-section_command">Player Attack Only Click</span>.
+        We take a priority toward the <span class="hotkey-section_command">Player Attack Only Click</span> <span class="key">J</span>, explained in the champions version of auto attacking. Along with <span class="hotkey-section_command">Player Hold Position</span> <span class="key">Shift+J</span>, and <span class="hotkey-section_command">Player Stop Position</span> <span class="key">Ctrl+J</span> 
+        with <span class="hotkey-section_command">Player Attack Move Click</span> <span class="key">Alt-J</span>
+    </p>
+    <h3>Auto attacking champions</h3>
+    <p>
+        Auto attacking champions is a similar technique to attacking minions with one additional mechanic, the <span class="hotkey-section_command">Target Champions Only</span>
+        should be pressed. By utilizing both the <span class="hotkey-section_command">Target Champions Only</span> and <span class="hotkey-section_command">Player Attack Only Click</span>
+        we are greatly able to improve our efficiency whilst orb walking. Using the <span class="hotkey-section_command">Target Champions Only</span> also allows us to easily move within 
+        minions without misclicking onto one of them aswell as walk through jungle camps. This can avoid stopping to auto attack krugs when you are trying to <span class="summoner-spell summoner-spell_flash">Flash</span> over the wall.
+    </p>
+    <p>
+        Placing the <span class="hotkey-section_command">Target Champions Only</span> onto the <span class="key">/</span> (between <span class="key">Shift</span> and <span class="key">.</span> - I believe it is different for different locales)
+        allows us to hold <span class="key">/</span>, <span class="key">MB2</span> away from the enemy and then hover over the enemy and press <span class="key">J</span>. The auto attack will work similarly to a quick cast spell. 
+    </p>
+
+    <h3>Offensive Spells</h3>
+    <p>
+        This layout makes use of hand position to control your main three spells as your home keys with your ultimate being a key away from your index finger. This layout uses quick cast as the primary means with normal cast on <span class="key">Shift</span>
+        explained in the defensive skills section. The <span class="key">Alt</span> and <span class="key">Ctrl</span> modifiers are swapped when compared to the default layout. <span class="hotkey-section_command">Target Champions Only</span> should be used
+        for this mechanic as well.
+    </p>
+    <h3>Defensive spells</h3>
+    <p>
+        Following the principle that keystrokes are easier than mouse clicks, with abilities which can be cast on an team mate, we make use of the <span class="hotkey-section_command">Select Ally *</span> commands. Because we have 
+        bound our normal cast spells onto the <span class="key">Shift</span> layer, we also use the shift layer for the ally selection. More specifically we use the keys underneath the home row for each finger. Arranging the keys 
+        in this way allows for the easy combination of commands. If we want to cast <span class="hotkey-section_command">Spell 1</span> onto our support and our <span class="hotkey-section_command">Spell 2</span> onto our bot. We 
+        can hold <span class="key">Shift</span> and the press <span class="key">J</span>, <span class="key">;</span>, <span class="key">I</span>, <span class="key">L</span> without moving the mouse.
+    </p>
+    <p>
+        The <span class="hotkey-section_command">Select Ally *</span> keys are also used to move the camera to the team mate, this can be used to easily navigate to a fight breaking out. The <span class="hotkey-section_command">Select Self</span>
+        is favoured over the <span class="hotkey-section_command">Center Camera on Champion</span> as it has the added utility of acting as a self cast along with our <span class="key">Alt</span> spell modifier. It has been placed at <span class="key">-</span>
+        to be easily reachable with the index finger. 
+    </p>
+    <p>
+        Arranging the selection keys close to the spell casts breaks the objective of avoiding multiple key presses with the same finger. For example, to cast <span class="hotkey-section_command">Spell 4</span> onto our support, our combination is - 
+        Hold <span class="key">Shift</span> and the press <span class="key">[</span>, <span class="key">;</span>, which are both controlled with the index finger. 
+    </p>
+
+    <h3>Summoner Spells</h3>
+    <p>
+        Summoner spells are located on the primary layer on keys <span class="key">L</span>, <span class="key">;</span>. It is recommended to have <span class="summoner-spell summoner-spell_flash">Flash</span> as <span class="hotkey-section_command">Summoner Spell 1</span>
+        as we are working under the assumption that <span class="summoner-spell summoner-spell_flash">Flash</span>, <span class="hotkey-section_command">Spell 3</span>/<span class="hotkey-section_command">Spell 4</span> is more common than 
+        <span class="summoner-spell summoner-spell_flash">Flash</span>, <span class="hotkey-section_command">Spell 2</span>. Also, <span class="key">L</span> is for (f)Lash. Also improves the ease of centring camera on self after the flash.
+    </p>
+
+    <h3>Items</h3>
+    <p>
+        The advantage of this layout is that using activatable items efficiency is improved. Using the <span class="key">7</span>, <span class="key">8</span> and <span class="key">9</span> keys in combination with the <span class="key">Shift</span> modifier
+        we have easier access to all 6 item slots. We use normal cast on all of the items. Using the <span class="key">Shift</span> modifier allows the same mechanic for selecting an ally so it is recommended that ally targetable items, especially reactionary
+        items such as <span class="item mikaels-crucible">Mikael's crucible</span> should be placed in slots 4-6. The trinket is assigned to <span class="key">U</span>. 
+    </p>
+    <h3>Camera Movement</h3>
+    <p>
+        We recommend using <span class="hotkey-section_command">Drag Scroll</span> as it allows you to keep your mouse in the centre of the screen more often. We assign it to <span class="key">MB3</span>. <span class="hotkey-section_command">Toggle Camera Lock</span> is assigned to <span class="key">Shift+-</span>
+    </p> 
+    <h3>Misc</h3>
+    <p>
+        <ul>
+            <li><span class="hotkey-section_command">Teleport Home</span> goes on <span class="key">Left Arrow</span></li>
+            <li><span class="hotkey-section_command">Open Shop</span> goes on <span class="key">Up Arrow</span></li>
+            <li><span class="hotkey-section_command">Focus Shop Search Bar</span> goes on <span class="key">Down Arrow</span></li>
+        </ul>
+    </p>
+
+    <h2>Hot keys</h2>
+    <h3>Abilities and summoner spells</h3>
+    <table>
+        <tr>
+            <th>
+                Command
+            </th>
+            <th>
+                Normal cast
+            </th>
+            <th>
+                Quick cast
+            </th>
+            <th>
+                Self cast
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Spell 1
+            </td>
+            <td>
+                Shift+I
+            </td>
+            <td>
+                I
+            </td>
+            <td>
+                Alt+I
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Spell 2
+            </td>
+            <td>
+                Shift+O
+            </td>
+            <td>
+                O
+            </td>
+            <td>
+                Alt+O
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Spell 3
+            </td>
+            <td>
+                Shift+P
+            </td>
+            <td>
+                P
+            </td>
+            <td>
+                Alt+P
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Spell 4
+            </td>
+            <td>
+                Shift+[
+            </td>
+            <td>
+                [
+            </td>
+            <td>
+                Alt+[
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Summoner spell 1
+            </td>
+            <td>
+
+            </td>
+            <td>
+                L
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Summoner spell 2
+            </td>
+            <td>
+
+            </td>
+            <td>
+                ;
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Level up spell 1
+            </td>
+            <td>
+                Ctrl+I
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Level up spell 2
+            </td>
+            <td>
+                Ctrl+O
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Level up spell 3
+            </td>
+            <td>
+                Ctrl+P
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Level up spell 4
+            </td>
+            <td>
+                Ctrl+[
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Target champions only
+            </td>
+            <td>
+                /
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Teleport home
+            </td>
+            <td>
+               Left Arrow 
+            </td>
+        </tr>
+    </table>
+    <h3>
+        Items
+    </h3>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Normal Cast</th>
+        </tr>
+        <tr>
+            <td>Trinket</td>
+            <td>U</td>
+        </tr>
+        <tr>
+            <td>Item 1</td>
+            <td>8</td>
+        </tr> 
+        <tr>
+            <td>Item 2</td>
+            <td>9</td>
+        </tr>   
+        <tr>
+            <td>Item 3</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Item 4</td>
+            <td>Shift+8</td>
+        </tr>
+        <tr>
+            <td>Item 5</td>
+            <td>Shift+9</td>
+        </tr>
+        <tr>
+            <td>
+                Item 6
+            </td>
+            <td>Shift+0</td>
+        </tr>
+    </table>
+    <h3>Player movement</h3>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Cast</th>
+        </tr>
+        <tr>
+            <td>
+                Player move click
+            </td>
+            <td>MB2</td>
+        </tr>
+        <tr>
+            <td>
+                Player attack move click
+            </td>
+            <td>Alt+J</td>
+        </tr>
+        <tr>
+            <td>Player attack only click</td>
+            <td>J</td>
+        </tr>
+        <tr>
+            <td>Player Hold Position</td>
+            <td>Shift+J</td>
+        </tr>
+        <tr>
+            <td>Player Stop Position</td>
+            <td>Ctrl+J</td>
+        </tr>
+        <tr>
+            <td>Move pet click</td>
+            <td>Alt+MB2</td>
+        </tr>
+    </table>
+    <h3>Camera Control</h3>
+    <table>
+        <tr>
+            <th>
+                Command
+            </th>
+            <th>
+                Cast
+            </th>
+        </tr>
+        <tr>
+            <td>Select Self</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Select Ally 1</td>
+            <td>Shift+M</td>
+        </tr>
+        <tr>
+            <td>Select Ally 2</td>
+            <td>Shift+K</td>
+        </tr>
+        <tr>
+            <td>Select Ally 3</td>
+            <td>Shift+L</td>
+        </tr>
+        <tr>
+            <td>Select Ally 4</td>
+            <td>Shift+;</td>
+        </tr>
+        <tr>
+            <td>Toggle Camera Lock</td>
+            <td>Shift+-</td>
+        </tr>
+        <tr>
+            <td>Drag Scroll</td>
+            <td>MB3</td>
+        </tr>
+    </table>
+    <h3>Item shop</h3>
+    <table>
+        <tr>
+            <th>
+                Command
+            </th>
+            <th>
+                Cast
+            </th>
+        </tr>
+        <tr>
+            <td>Open Shop</td>
+            <td>Up Arrow</td>
+        </tr>
+        <tr>
+            <td>Focus shop search bar</td>
+            <td>Down Arrow</td>
+        </tr>
+    </table>
+</body>
+
+https://codepen.io/lukedavidcowley/full/wbmbbL
+https://www.reddit.com/user/etch0sketch/draft/588cbae4-7e6c-11e9-8e05-0e6c5b32e13a
